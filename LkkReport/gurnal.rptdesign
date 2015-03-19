@@ -5,6 +5,465 @@
     <property name="iconFile">/templates/blank_report.gif</property>
     <property name="bidiLayoutOrientation">ltr</property>
     <property name="imageDPI">96</property>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc.dbprofile" name="Data Source" id="9">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>org.eclipse.datatools.connectivity.db.connectionProperties</name>
+                </ex-property>
+                <ex-property>
+                    <name>org.eclipse.datatools.connectivity.oda.profile.db.provider.id</name>
+                    <value>org.eclipse.datatools.enablement.sqlite.connectionProfile</value>
+                </ex-property>
+                <ex-property>
+                    <name>org.eclipse.datatools.connectivity.db.savePWD</name>
+                    <value>false</value>
+                </ex-property>
+                <ex-property>
+                    <name>org.eclipse.datatools.connectivity.drivers.defnType</name>
+                    <value>org.eclipse.datatools.enablement.sqlite.3_5_9.driver</value>
+                </ex-property>
+                <ex-property>
+                    <name>org.eclipse.datatools.connectivity.driverDefinitionID</name>
+                    <value>DriverDefn.org.eclipse.datatools.enablement.sqlite.3_5_9.driver.SQLite JDBC</value>
+                </ex-property>
+                <ex-property>
+                    <name>org.eclipse.datatools.connectivity.db.version</name>
+                    <value>3.5.9</value>
+                </ex-property>
+                <ex-property>
+                    <name>org.eclipse.datatools.connectivity.db.vendor</name>
+                    <value>SQLITE</value>
+                </ex-property>
+            </list-property>
+            <property name="databaseName">lkk</property>
+            <property name="username"></property>
+            <encrypted-property name="password" encryptionID="base64"></encrypted-property>
+            <property name="URL">jdbc:sqlite:C:\Users\Roma\lkk.db</property>
+            <property name="driverClass">org.sqlite.JDBC</property>
+            <property name="jarList">C:\Users\Roma\git\LKK\lib\sqlite-jdbc-3.7.15-SNAPSHOT-2.jar</property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.dbprofile.sqbDataSet" name="Data Set" id="10">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">STRFTIME('%d.%m.%Y', DATEZAPOVN)</property>
+                    <property name="alias">Дата</property>
+                    <text-property name="displayName">STRFTIME('%d.%m.%Y', DATEZAPOVN)</text-property>
+                    <text-property name="heading">STRFTIME('%d.%m.%Y', DATEZAPOVN)</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">lastname</property>
+                    <property name="alias">Прізвище</property>
+                    <text-property name="displayName">lastname</text-property>
+                    <text-property name="heading">lastname</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">name</property>
+                    <property name="alias">Ім'я</property>
+                    <text-property name="displayName">name</text-property>
+                    <text-property name="heading">name</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">fathersname</property>
+                    <property name="alias">По-батькові</property>
+                    <text-property name="displayName">fathersname</text-property>
+                    <text-property name="heading">fathersname</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">STRFTIME('%d.%m.%Y', DATEBORN)</property>
+                    <property name="alias">Дата Нар.</property>
+                    <text-property name="displayName">STRFTIME('%d.%m.%Y', DATEBORN)</text-property>
+                    <text-property name="heading">STRFTIME('%d.%m.%Y', DATEBORN)</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">adress</property>
+                    <property name="alias">Адреса</property>
+                    <text-property name="displayName">adress</text-property>
+                    <text-property name="heading">adress</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">privid</property>
+                    <property name="alias">Діагноз</property>
+                    <text-property name="displayName">privid</text-property>
+                    <text-property name="heading">privid</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">zaklkom</property>
+                    <property name="alias">Заключення</property>
+                    <text-property name="displayName">zaklkom</text-property>
+                    <text-property name="heading">zaklkom</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">target</property>
+                    <property name="alias">Куди видано</property>
+                    <text-property name="displayName">target</text-property>
+                    <text-property name="heading">target</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">Дата</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Прізвище</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Ім'я</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">По-батькові</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">Дата Нар.</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">Адреса</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">Діагноз</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">Заключення</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">Куди видано</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">STRFTIME('%d.%m.%Y', DATEZAPOVN)</property>
+                    <property name="nativeName">STRFTIME('%d.%m.%Y', DATEZAPOVN)</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">0</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">lastname</property>
+                    <property name="nativeName">lastname</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">name</property>
+                    <property name="nativeName">name</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">fathersname</property>
+                    <property name="nativeName">fathersname</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">STRFTIME('%d.%m.%Y', DATEBORN)</property>
+                    <property name="nativeName">STRFTIME('%d.%m.%Y', DATEBORN)</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">0</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">adress</property>
+                    <property name="nativeName">adress</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">privid</property>
+                    <property name="nativeName">privid</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">zaklkom</property>
+                    <property name="nativeName">zaklkom</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">target</property>
+                    <property name="nativeName">target</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[SELECT STRFTIME('%d.%m.%Y', DATEZAPOVN), LASTNAME, NAME, FATHERSNAME,
+  STRFTIME('%d.%m.%Y', DATEBORN), ADRESS, PRIVID, ZAKLKOM, TARGET
+  FROM MAIN
+  ORDER BY STRFTIME('%d.%m.%Y', DATEZAPOVN) ASC, LASTNAME ASC, ADRESS ASC
+]]></xml-property>
+            <structure name="designerState">
+                <property name="version">1.0</property>
+                <property name="stateContentAsString">&lt;?xml version="1.0" encoding="UTF-8"?>&#13;
+&lt;SQLQueryBuilder editorInputType="SQLBuilderStorageEditorInput" name="Data Set" version="1.0">&#13;
+&lt;SQLStatement>SELECT STRFTIME(&amp;apos;%d.%m.%Y&amp;apos;, DATEZAPOVN), LASTNAME, NAME, FATHERSNAME,&amp;#x0A;  STRFTIME(&amp;apos;%d.%m.%Y&amp;apos;, DATEBORN), ADRESS, PRIVID, ZAKLKOM, TARGET&amp;#x0A;  FROM MAIN&amp;#x0A;  ORDER BY STRFTIME(&amp;apos;%d.%m.%Y&amp;apos;, DATEZAPOVN) ASC, LASTNAME ASC, ADRESS ASC&amp;#x0A;&lt;/SQLStatement>&#13;
+&lt;connInfo>SQLITE_3.5.9:Transient.org.eclipse.datatools.enablement.sqlite.connectionProfile:lkk:&lt;/connInfo>&#13;
+&lt;omitSchemaInfo>false:true:&lt;/omitSchemaInfo>&#13;
+&lt;editorInputUsageOptions>useWindowState=true&lt;/editorInputUsageOptions>&#13;
+&lt;windowState height="796" version="1.0" width="1252">&#13;
+&lt;control height="251" isHideable="true" isVisible="true" name="SQLSourceViewer" width="1225"/>&#13;
+&lt;control height="256" isHideable="true" isVisible="true" name="DesignViewer" width="1238"/>&#13;
+&lt;control height="251" isHideable="true" isVisible="true" name="GraphControl" width="1230"/>&#13;
+&lt;control height="255" isHideable="true" isVisible="false" name="OutlineViewer" width="198"/>&#13;
+&lt;/windowState>&#13;
+&lt;/SQLQueryBuilder></property>
+            </structure>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>STRFTIME('%d.%m.%Y', DATEZAPOVN)</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>0</design:nativeDataTypeCode>
+            <design:precision>0</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>STRFTIME('%d.%m.%Y', DATEZAPOVN)</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>STRFTIME('%d.%m.%Y', DATEZAPOVN)</design:label>
+            <design:formattingHints>
+              <design:displaySize>2147483647</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>lastname</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>0</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>lastname</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>lastname</design:label>
+            <design:formattingHints>
+              <design:displaySize>2147483647</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>name</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>0</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>name</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>name</design:label>
+            <design:formattingHints>
+              <design:displaySize>2147483647</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>fathersname</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>0</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>fathersname</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>fathersname</design:label>
+            <design:formattingHints>
+              <design:displaySize>2147483647</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>STRFTIME('%d.%m.%Y', DATEBORN)</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>0</design:nativeDataTypeCode>
+            <design:precision>0</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>STRFTIME('%d.%m.%Y', DATEBORN)</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>STRFTIME('%d.%m.%Y', DATEBORN)</design:label>
+            <design:formattingHints>
+              <design:displaySize>2147483647</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>adress</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>0</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>adress</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>adress</design:label>
+            <design:formattingHints>
+              <design:displaySize>2147483647</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>privid</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>0</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>privid</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>privid</design:label>
+            <design:formattingHints>
+              <design:displaySize>2147483647</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>zaklkom</design:name>
+              <design:position>8</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>0</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>zaklkom</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>zaklkom</design:label>
+            <design:formattingHints>
+              <design:displaySize>2147483647</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>target</design:name>
+              <design:position>9</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>0</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>target</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>target</design:label>
+            <design:formattingHints>
+              <design:displaySize>2147483647</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria>
+        <design:rowOrdering>
+          <design:sortKeys>
+            <design:columnIdentifier>
+              <design:name>STRFTIME('%d.%m.%Y', DATEZAPOVN)</design:name>
+            </design:columnIdentifier>
+            <design:sortDirection>Ascending</design:sortDirection>
+            <design:optional>false</design:optional>
+          </design:sortKeys>
+          <design:sortKeys>
+            <design:columnIdentifier>
+              <design:name>LASTNAME</design:name>
+            </design:columnIdentifier>
+            <design:sortDirection>Ascending</design:sortDirection>
+            <design:optional>false</design:optional>
+          </design:sortKeys>
+          <design:sortKeys>
+            <design:columnIdentifier>
+              <design:name>ADRESS</design:name>
+            </design:columnIdentifier>
+            <design:sortDirection>Ascending</design:sortDirection>
+            <design:optional>false</design:optional>
+          </design:sortKeys>
+        </design:rowOrdering>
+      </design:criteria>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
     <styles>
         <style name="report" id="4">
             <property name="fontFamily">sans-serif</property>
@@ -64,5 +523,184 @@
             <property name="textAlign">center</property>
             <text-property name="text">реєстрації довідок ЛКК</text-property>
         </label>
+        <table id="11">
+            <property name="dataSet">Data Set</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">Дата</property>
+                    <text-property name="displayName">STRFTIME('%d.%m.%Y', DATEZAPOVN)</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Дата"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Прізвище</property>
+                    <text-property name="displayName">lastname</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Прізвище"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Ім'я</property>
+                    <text-property name="displayName">name</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Ім'я"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">По-батькові</property>
+                    <text-property name="displayName">fathersname</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["По-батькові"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Дата Нар.</property>
+                    <text-property name="displayName">STRFTIME('%d.%m.%Y', DATEBORN)</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Дата Нар."]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Адреса</property>
+                    <text-property name="displayName">adress</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Адреса"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Діагноз</property>
+                    <text-property name="displayName">privid</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Діагноз"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Заключення</property>
+                    <text-property name="displayName">zaklkom</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Заключення"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Куди видано</property>
+                    <text-property name="displayName">target</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Куди видано"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <column id="60"/>
+            <column id="61"/>
+            <column id="62"/>
+            <column id="63"/>
+            <column id="64"/>
+            <column id="65"/>
+            <column id="66"/>
+            <column id="67"/>
+            <column id="68"/>
+            <header>
+                <row id="12">
+                    <cell id="13">
+                        <label id="14">
+                            <text-property name="text">Дата</text-property>
+                        </label>
+                    </cell>
+                    <cell id="15">
+                        <label id="16">
+                            <text-property name="text">Прізвище</text-property>
+                        </label>
+                    </cell>
+                    <cell id="17">
+                        <label id="18">
+                            <text-property name="text">Ім'я</text-property>
+                        </label>
+                    </cell>
+                    <cell id="19">
+                        <label id="20">
+                            <text-property name="text">По-батькові</text-property>
+                        </label>
+                    </cell>
+                    <cell id="21">
+                        <label id="22">
+                            <text-property name="text">Дата Нар.</text-property>
+                        </label>
+                    </cell>
+                    <cell id="23">
+                        <label id="24">
+                            <text-property name="text">Адреса</text-property>
+                        </label>
+                    </cell>
+                    <cell id="25">
+                        <label id="26">
+                            <text-property name="text">Діагноз</text-property>
+                        </label>
+                    </cell>
+                    <cell id="27">
+                        <label id="28">
+                            <text-property name="text">Заключення</text-property>
+                        </label>
+                    </cell>
+                    <cell id="29">
+                        <label id="30">
+                            <text-property name="text">Куди видано</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="31">
+                    <cell id="32">
+                        <data id="33">
+                            <property name="resultSetColumn">Дата</property>
+                        </data>
+                    </cell>
+                    <cell id="34">
+                        <data id="35">
+                            <property name="resultSetColumn">Прізвище</property>
+                        </data>
+                    </cell>
+                    <cell id="36">
+                        <data id="37">
+                            <property name="resultSetColumn">Ім'я</property>
+                        </data>
+                    </cell>
+                    <cell id="38">
+                        <data id="39">
+                            <property name="resultSetColumn">По-батькові</property>
+                        </data>
+                    </cell>
+                    <cell id="40">
+                        <data id="41">
+                            <property name="resultSetColumn">Дата Нар.</property>
+                        </data>
+                    </cell>
+                    <cell id="42">
+                        <data id="43">
+                            <property name="resultSetColumn">Адреса</property>
+                        </data>
+                    </cell>
+                    <cell id="44">
+                        <data id="45">
+                            <property name="resultSetColumn">Діагноз</property>
+                        </data>
+                    </cell>
+                    <cell id="46">
+                        <data id="47">
+                            <property name="resultSetColumn">Заключення</property>
+                        </data>
+                    </cell>
+                    <cell id="48">
+                        <data id="49">
+                            <property name="resultSetColumn">Куди видано</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="50">
+                    <cell id="51"/>
+                    <cell id="52"/>
+                    <cell id="53"/>
+                    <cell id="54"/>
+                    <cell id="55"/>
+                    <cell id="56"/>
+                    <cell id="57"/>
+                    <cell id="58"/>
+                    <cell id="59"/>
+                </row>
+            </footer>
+        </table>
     </body>
 </report>
